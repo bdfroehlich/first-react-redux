@@ -5,7 +5,7 @@ import { decrement, increment, incrementByAmount } from '../features/counterSlic
 const Counter = () => {
     // Call useSelector to grab the current value of our state variable
     // from the store, and assign it to a variable named "count"
-    const count = useSelector((state) => state.value)
+    const count = useSelector((state) => state.counter.value)
     // And include the useDispatch hook...
     const dispatch = useDispatch()
     const [ input, setInput ] = useState(0)
@@ -29,7 +29,7 @@ const Counter = () => {
             </button>
             <form onSubmit={(e) => byAmountSubmit(e)}>
                 <input type="number" onChange={(e) => setInput(e.target.value)} />
-                <button type="submit">Submit</button>
+                <button type="submit">Custom Amount</button>
             </form>
         </div>
     )

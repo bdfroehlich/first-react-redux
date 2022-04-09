@@ -1,9 +1,13 @@
 import './App.css';
 import Counter from './components/Counter.js';
+import Todo from './components/Todo.js';
 
 function App() {
   return (
-   <Counter />
+    <div>
+       <Counter />
+      <Todo />
+    </div>
   );
 }
 
